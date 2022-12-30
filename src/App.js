@@ -10,11 +10,15 @@ function App() {
 
   return (
     <div className='bg-[#000000] h-screen text-white'>
-      <Navbar/>
-      <Routes>
-        <Route path='/' element={<Main/>}/>
-        <Route path='add-ticket' element={<AddTicket/>}/>
-      </Routes>
+     
+        <Navbar/>
+        <section className='hidden md:block lg:block'>
+            <Routes>
+              <Route path='/' element={<Main/>}/>
+              <Route path='add-ticket' element={<AddTicket/>}/>
+            </Routes>
+        </section>
+      <p className='md:hidden lg:hidden pt-[7vh] text-center text-xl'>Please View This on a Large Screen.</p>
     </div>
   )
 }
