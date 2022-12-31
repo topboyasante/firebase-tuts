@@ -15,7 +15,7 @@ function AddTicket() {
 
     async function createTicket(e){
         e.preventDefault()
-        if(newName!='' && newAge!= '' && newCategory!='' && newSession!=''){
+        if(newName!=='' && newAge!== '' && newCategory!=='' && newSession!==''){
             await addDoc(usersCollectionRef,{
                 Name:newName,
                 Age:newAge,

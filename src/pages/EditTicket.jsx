@@ -1,15 +1,13 @@
-import React,{useState,useEffect, useContext} from 'react'
+import React,{useState} from 'react'
 import { db } from '../firebase-config'
 import { updateDoc,doc} from 'firebase/firestore'
 import { useNavigate, useParams } from 'react-router-dom'
-import { AppContext } from '../context/AppContext'
 import Swal from 'sweetalert2'
 
 function EditTicket() {
     const navigate = useNavigate()
     const {ticketID} = useParams()
     const userDoc = doc(db,"users",ticketID)
-    const {users} = useContext(AppContext)
     const [newName,setNewName] = useState()
     const [newAge,setNewAge] = useState()
     const [newCategory,setNewCategory] = useState()
